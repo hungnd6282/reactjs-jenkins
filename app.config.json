@@ -1,0 +1,10 @@
+{
+  apps : [
+    {
+      name      : "reactjs",
+      script    : "npx",
+      interpreter: "none",
+      args: "serve -p 80 -T"
+    }
+  ]
+}
