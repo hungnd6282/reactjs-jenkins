@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    tools {nodejs "node"}
     stages {
         stage('Clone'){
             steps{
@@ -9,15 +8,15 @@ pipeline {
         }
         stage("Build") {
             steps {
-                sh "npm install"
-                sh "npm run build"
+                sh "sudo npm install"
+                sh "sudo npm run build"
             }
         }
-        // stage("Deploy") {
-        //     steps {
-        //         sh "rm -rf /var/www/jenkins-react-app"
-        //         sh "sudo cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
-        //     }
-        // }
+        stage("Deploy") {
+            steps {
+                sh "rm -rf /var/www/jenkins-react-app"
+                sh "sudo cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
+            }
+        }
     }
 }
