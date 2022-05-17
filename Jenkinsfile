@@ -16,6 +16,8 @@ pipeline {
             steps {
                 // sh "rm -rf /var/www/jenkins-react-app"
                 sh "cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
+                sh "cd /var/www/jenkins-react-app/"
+                sh "pm2 start app.config.json"
             }
         }
     }
