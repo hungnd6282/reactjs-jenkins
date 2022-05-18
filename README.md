@@ -71,3 +71,10 @@ https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-
 
 sudo certbot --nginx -d saavn.click -d www.saavn.click
 
+sudo ln -f /etc/nginx/sites-available/saavn.click /etc/nginx/sites-enabled/saavn.click
+
+sudo certbot --nginx -d saavn.click -d www.saavn.click
+
+
+pm2 serve . 3000 --spa --name "reactjs"
+
