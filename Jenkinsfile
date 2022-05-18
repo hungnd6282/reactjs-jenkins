@@ -8,16 +8,14 @@ pipeline {
         }
         stage("Build") {
             steps {
-                sh "npm install"
-                sh "npm run build"
+                sh "sudo npm install"
+                sh "sudo npm run build"
             }
         }
         stage("Deploy") {
             steps {
-                // sh "rm -rf /var/www/jenkins-react-app"
+                sh "rm -rf /var/www/jenkins-react-app"
                 sh "cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
-                sh "cd /var/www/jenkins-react-app/"
-                sh "pm2 start app.config.json"
             }
         }
     }
