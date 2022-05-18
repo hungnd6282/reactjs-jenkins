@@ -50,3 +50,16 @@ https://stackoverflow.com/questions/17940612/authentication-error-in-jenkins-on-
 sudo service jenkins start/stop/restart
 
 
+Starting, stopping, and restarting Jenkins on Ubuntu
+Jenkins by default starts running when installed. Here are the commands to start, stop, restart, and check the status of the Jenkins service:
+
+To start Jenkins, use the following command:
+        sudo systemctl start jenkins 
+Similarly, to stop Jenkins, use the following command:
+        sudo systemctl stop jenkins 
+To restart Jenkins, use the following command:
+        sudo systemctl restart jenkins 
+To check the status of the Jenkins service, use the following systemctl command:
+        sudo systemctl status jenkins 
+
+
