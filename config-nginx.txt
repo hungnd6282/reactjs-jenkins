@@ -1,9 +1,9 @@
 server {                                                                 
 listen 80;                                                               
-  server_name 54.151.147.136;
+  server_name 18.142.183.140;
 
-    access_log /var/log/nginx/reat-tutorial.com.access.log;
-    error_log /var/log/nginx/reat-tutorial.com.error.log;
+    access_log /var/log/nginx/jenkins-react-app.com.access.log;
+    error_log /var/log/nginx/jenkins-react-app.com.error.log;
     location / {
         proxy_pass http://localhost:3000;                                 
         proxy_http_version 1.1;
