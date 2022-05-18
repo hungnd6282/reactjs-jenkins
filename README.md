@@ -27,6 +27,7 @@ listen 80;
 sudo ln -s /etc/nginx/sites-available/jenkins-react-app /etc/nginx/sites-enabled/jenkins-react-app
 
 
+
 //////////////// install pm2 //////////////////
 npm install -g serve
 npm install -g pm2
@@ -62,4 +63,11 @@ To restart Jenkins, use the following command:
 To check the status of the Jenkins service, use the following systemctl command:
         sudo systemctl status jenkins 
 
+
+
+//////////////// HTTPS //////////////////
+
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04
+
+sudo certbot --nginx -d saavn.click -d www.saavn.click
 
