@@ -23,3 +23,7 @@ Install jenkins
 https://devopsarticle.com/how-to-install-jenkins-on-aws-ec2-ubuntu-20-04/
 
 
+Jenkins using sudo
+https://stackoverflow.com/questions/17940612/authentication-error-in-jenkins-on-using-sudo
+
+
